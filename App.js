@@ -1,16 +1,12 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
+import { Button } from "./src";
 
 const App = () => {
 	return (
 		<View style={styles.appContainer}>
-			<View style={styles.header}>
-				<Text style={styles.title}>Babingka</Text>
-				<Text>Navigation</Text>
-			</View>
-			<View style={styles.mainContainer}>
-				<Text> Main Content </Text>
-			</View>
+			<Button>Login</Button>
+			<Button>Create Account</Button>
 		</View>
 	);
 };
@@ -18,28 +14,10 @@ const App = () => {
 const styles = StyleSheet.create({
 	appContainer: {
 		flex: 1,
-		backgroundColor: "#3c3c3c",
-	},
-
-	header: {
-		flex: 1,
-		backgroundColor: "orange",
-		width: 400,
-		paddingTop: 40,
-		paddingLeft: 20,
-		paddingRight: 20,
-		flexDirection: "row",
-		justifyContent: "space-between",
+		backgroundColor: "#fafafa",
+		flexDirection: "column",
 		alignItems: "center",
-	},
-
-	mainContainer: {
-		flex: 11,
-	},
-
-	title: {
-		color: "#fafafa",
-		fontSize: 24,
+		justifyContent: "center",
 	},
 });
 

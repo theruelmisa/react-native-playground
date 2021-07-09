@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, TouchableHighlight } from "react-native";
 
 const Button = ({ children, title, backgroundColor }) => {
 	const styles = StyleSheet.create({
@@ -14,9 +14,15 @@ const Button = ({ children, title, backgroundColor }) => {
 	});
 
 	return (
-		<View style={styles.buttonContainer}>
-			<Text>{children}</Text>
-		</View>
+		<TouchableHighlight
+			onPress={() => {
+				alert(`Pressed button`);
+			}}
+		>
+			<View style={styles.buttonContainer}>
+				<Text>{children}</Text>
+			</View>
+		</TouchableHighlight>
 	);
 };
 

@@ -1,12 +1,18 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { Button } from "./src";
+import { StyleSheet, Text, View, ScrollView } from "react-native";
+import { Box, Button } from "./src";
 
 const App = () => {
 	return (
 		<View style={styles.appContainer}>
-			<Button>Login</Button>
-			<Button>Create Account</Button>
+			<Box>
+				<Button title="Login" backgroundColor="orange" borderColor="orange">
+					Login
+				</Button>
+				<Button title="Create Account" backgroundColor="transparent">
+					Create Account
+				</Button>
+			</Box>
 		</View>
 	);
 };
@@ -16,8 +22,6 @@ const styles = StyleSheet.create({
 		flex: 1,
 		backgroundColor: "#fafafa",
 		flexDirection: "column",
-		alignItems: "center",
-		justifyContent: "center",
 	},
 });
 
